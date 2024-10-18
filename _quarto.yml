@@ -1,0 +1,21 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "lecture/"
+
+website:
+  title: "E85"
+  navbar:
+    left:
+      - href: syllabus/
+        text: Syllabus
+      - href: resources/
+        text: Resources
+
+format:
+  html:
+    theme: [cosmo, custom.scss]
+    toc: true
+    highlight-style: ally
+    monobackgroundcolor: transparent
