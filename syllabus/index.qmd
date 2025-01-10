@@ -37,19 +37,19 @@ Readings for each lecture are listed on the schedule below. Many students say th
 | `1001` | 20-Feb | Fixed and floating-point number systems | Number Examples | 5.3 | Lab 4 due Behavioral FSM |
 | `1010` | 25-Feb | Sequential building blocks, arrays | Sequential Examples | 5.4-5.7 | PS 5 due |
 | `1011` | 27-Feb | Midterm Review | Midterm Review |  | Lab 5 due Multicycle Control |
-| `1100` | 4-Mar | Midterm |  |  | Midterm Due 2:30 pm |
-| `1101` | 6-Mar | C Programming | C Examples | C.1-C.7 |  |
-| `1110` | 11-Mar | C Programming | C Examples | C.8-C.11 |  |
-| `1111` | 13-Mar | Microcontrollers: Memory-mapped I/O | SEGGER Embedded Studio | 9.1-9.3.3 | PS 6 due |
-| `10000` | 18-Mar | Parallel & serial interfacing, ADCs | Lights & Switches | 9.3-9.4 | Lab 6 due C Programming |
+|  | 4-Mar | Midterm |  |  | Midterm Due 2:30 pm |
+| `1100` | 6-Mar | C Programming | C Examples | C.1-C.7 |  |
+| `1101` | 11-Mar | C Programming | C Examples | C.8-C.11 |  |
+| `1110` | 13-Mar | Microcontrollers: Memory-mapped I/O | SEGGER Embedded Studio | 9.1-9.3.3 | PS 6 due |
+| `1111` | 18-Mar | Parallel & serial interfacing, ADCs | Lights & Switches | 9.3-9.4 | Lab 6 due C Programming |
 |  | 20-Mar | Spring Break |  |  |  |
 |  | 25-Mar | Spring Break |  |  |  |
-| `10001` | 27-Mar | I/O libraries and examples | SPI Accelerometer |  | PS 7 due |
-| `10010` | 1-Apr | Assembly language | Assembly Examples | 6.1-6.3.6 | Lab 7 due Simon |
-| `10011` | 3-Apr | Function calls | Assembly Functions | 6.3.7-6.9 |  |
-| `10100` | 8-Apr | Machine language |  |  | Lab 8 due SPI |
-| `10101` | 10-Apr | Single-cycle processor datapath | Pulse Width Modulation | 7.1-7.3.1 | PS 8 due |
-|  | 15-Apr | Single-cycle processor control, Verilog | Sidewalk Processor | 7.3, 7.6 | Lab 9 due Sound & Light |
+| `10000` | 27-Mar | I/O libraries and examples | SPI Accelerometer |  | PS 7 due |
+| `10001` | 1-Apr | Assembly language | Assembly Examples | 6.1-6.3.6 | Lab 7 due Simon |
+| `10010` | 3-Apr | Function calls | Assembly Functions | 6.3.7-6.9 |  |
+| `10011` | 8-Apr | Machine language |  |  | Lab 8 due SPI |
+| `10100` | 10-Apr | Single-cycle processor datapath | Pulse Width Modulation | 7.1-7.3.1 | PS 8 due |
+| `10101` | 15-Apr | Single-cycle processor control, Verilog | Sidewalk Processor | 7.3, 7.6 | Lab 9 due Sound & Light |
 | `10110` | 17-Apr | Multicycle processor | Multicycle Processor | 7.4 | PS 9 due |
 | `10111` | 22-Apr | Pipelining | Hazards, add instrs | 7.5.1-2 | Lab 10 due Multicycle Control |
 | `11000` | 24-Apr | Advanced architecture: a sampler | Free time for Lab 10 | 7.7 | PS 10 due |
@@ -180,19 +180,12 @@ Students in this class are expected to follow the HMC honor code. An honor code 
 
 ## Health and Wellness
 
-College students often experience issues that may interfere with academic success such as academic stress,
-sleep problems, juggling responsibilities, life events, relationship concerns, or feelings of anxiety,
-hopelessness, or depression. If you or a friend is struggling, we strongly encourage you to seek support.
-Helpful, effective resources are available on campus, at no charge.
+College students often experience issues that may interfere with academic success such as academic stress, sleep problems, juggling responsibilities, life events, relationship concerns, or feelings of anxiety, hopelessness, or depression. If you or a friend is struggling, we strongly encourage you to seek support. Helpful, effective resources are available on campus, at no charge.
 
 -   If you are struggling with this class, please visit during office hours or contact an instructor by email.
--   Check-in with an academic dean if you are struggling in courses or unsure what academic
-    resources are available at HMC by emailing [academicdeans@g.hmc.edu](mailto:academicdeans@g.hmc.edu).
--   Reach out to The Office of Health and Wellness to discuss options available by
-    emailing [wellness@hmc.edu](mailto:wellness@hmc.edu).
--   MCAPS provides crisis support services 24/7/365. Students can call us at 909-621-8202 and
-    press “1” at the prompt to speak with a crisis counselor. Other prompt options are available for
-    those not in crisis.
+-   Check-in with an academic dean if you are struggling in courses or unsure what academic resources are available at HMC by emailing [academicdeans\@g.hmc.edu](mailto:academicdeans@g.hmc.edu).
+-   Reach out to The Office of Health and Wellness to discuss options available by emailing [wellness\@hmc.edu](mailto:wellness@hmc.edu).
+-   MCAPS provides crisis support services 24/7/365. Students can call us at 909-621-8202 and press “1” at the prompt to speak with a crisis counselor. Other prompt options are available for those not in crisis.
 
 ## Inclusiveness and Harassment
 
@@ -200,4 +193,4 @@ We do difficult work in this class and everyone should feel comfortable engaging
 
 ## Educational Accessibility
 
-HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at [ability@g.hmc.edu](mailto:ability@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's disability resources officer.
+HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at [ability\@g.hmc.edu](mailto:ability@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's disability resources officer.
