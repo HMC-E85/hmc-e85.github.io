@@ -98,6 +98,20 @@
     "text": "Educational Accessibility\nHMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at ability@g.hmc.edu to request accommodations. Students from the other Claremont Colleges should contact their home college’s disability resources officer."
   },
   {
+    "objectID": "ps/index.html",
+    "href": "ps/index.html",
+    "title": "Problem Sets",
+    "section": "",
+    "text": "Problem Set 1 [pdf]\nProblem Set 2 [pdf]\nProblem Set 3 [pdf]\nProblem Set 4 [pdf]\nProblem Set 5 [pdf]\nProblem Set 6 [pdf]\nProblem Set 7 [pdf]\nProblem Set 8 [pdf]\nProblem Set 9 [pdf]\nProblem Set 10 [pdf]"
+  },
+  {
+    "objectID": "lab/index.html",
+    "href": "lab/index.html",
+    "title": "Labs",
+    "section": "",
+    "text": "Lab 1: Electrical Characteristics of Logic Gates [pdf]\nLab 2: FPGA Tools and Combinational Logic Design [pdf]\nLab 3: Finite State Machine Design [pdf]\nLab 4: Behavioral Verilog FSM [pdf]\nLab 5: Music Keyboard [pdf]\nLab 6: Linear Algebra in C on a Microcontroller [pdf]\nLab 7: Simon [pdf]\nLab 8: Digital Level [pdf]\nLab 9: Airbag Trigger [pdf]\nLab 10: Multicycle Controller [pdf]\nLab 11: Multicycle Processor [pdf]"
+  },
+  {
     "objectID": "home/index.html",
     "href": "home/index.html",
     "title": "E85",
