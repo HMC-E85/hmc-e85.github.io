@@ -2,23 +2,60 @@
 title: E85 Syllabus
 format:
   html: default
+  pdf: default
 ---
 
 ## Teaching Team
 
-| Item                   | Information                                          |
-|-----------------------|-------------------------------------------------|
-| Instructors            | Prof. Josh Brake, Prof. Tina Smilkstein              |
-| Tutoring & Tau Beta Pi | Kevin Kim, Allison Marten, Noah Limpert, Zoe Worrall |
+| Item | Information |
+|----------------------------|--------------------------------------------|
+| Instructors | Prof. Josh Brake, Prof. David Harris |
+| Tutoring & Tau Beta Pi | Vikram Krishna, Madeleine Kan, Jessica Liu, Troy Kaufman, Roman De Santos |
 
 ## Schedule
 
-| **Name**     | **Info**          | Location           |
-|--------------|-------------------|--------------------|
-| Lecture      | MW 2:45 - 4:00 pm | Beckman Hall, B126 |
-| Office Hours | W 10:30-11:30a    | Digital Lab        |
+| **Name**     | **Info**          | Location    |
+|--------------|-------------------|-------------|
+| Lecture      | TR 1:15 - 2:30 pm | SHAN 3481   |
+| Office Hours | TBD               | Digital Lab |
 
 "Office hours" is code for "come hang out." You are encouraged to attend office hours to ask questions, get help with your labs, talk about careers and graduate school, or chat about something on your mind (whether it is related to this class, academics, or anything else). I am available more often than not, so try dropping me a line via Discord or email if you are having a problem with your lab or want to set up a time. You may also contact the lab assistant(s) for questions when I am not available.
+
+Readings for each lecture are listed on the schedule below. Many students say they have found the readings valuable and enjoyable. You'll get the most out of the class if you read the sections in advance of the class time and come with questions, and then reread as necessary when you work your problem sets and labs.
+
+| Lecture | Date | Topic | Class Activity | Readings | Assignment |
+|------------|------------|------------|------------|------------|------------|
+| `0` | 21-Jan | Introduction: digital abstraction, numbers | Welcome: numbers | 1.1-1.5 |  |
+| `1` | 23-Jan | Logic gates, static discipline, transistors | Soldering (Digital Lab) | 1.6-1.9, A1-A7 |  |
+| `10` | 28-Jan | Combinational logic design | Datasheets & Circuits | 2.1-2.8 | PS 1 due |
+| `11` | 30-Jan | Timing, sequential circuits | Logic Design | 2.9-2.10, 3.1-3.2 | Lab 1 due Digital Circuits |
+| `100` | 4-Feb | Finite state machines | FSM Design | 3.3-3.4 | PS 2 due |
+| `101` | 6-Feb | Dynamic discipline, metastability | Timing Optimization | 3.5-3.7 | Lab 2 due Comb Logic |
+| `110` | 11-Feb | Hardware Description Languages: Verilog, Part I | Verilog FSM | 4.1-4.3 | PS 3 due |
+| `111` | 13-Feb | Verilog, Part II | Verilog to Schematics | 4.4-4.10 | Lab 3 due Structural FSM |
+| `1000` | 18-Feb | Arithmetic circuits | Block Design | 5.1-5.2 | PS 4 due |
+| `1001` | 20-Feb | Fixed and floating-point number systems | Number Examples | 5.3 | Lab 4 due Behavioral FSM |
+| `1010` | 25-Feb | Sequential building blocks, arrays | Sequential Examples | 5.4-5.7 | PS 5 due |
+| `1011` | 27-Feb | Midterm Review | Midterm Review |  | Lab 5 due Multicycle Control |
+| `1100` | 4-Mar | Midterm |  |  | Midterm Due 2:30 pm |
+| `1101` | 6-Mar | C Programming | C Examples | C.1-C.7 |  |
+| `1110` | 11-Mar | C Programming | C Examples | C.8-C.11 |  |
+| `1111` | 13-Mar | Microcontrollers: Memory-mapped I/O | SEGGER Embedded Studio | 9.1-9.3.3 | PS 6 due |
+| `10000` | 18-Mar | Parallel & serial interfacing, ADCs | Lights & Switches | 9.3-9.4 | Lab 6 due C Programming |
+|  | 20-Mar | Spring Break |  |  |  |
+|  | 25-Mar | Spring Break |  |  |  |
+| `10001` | 27-Mar | I/O libraries and examples | SPI Accelerometer |  | PS 7 due |
+| `10010` | 1-Apr | Assembly language | Assembly Examples | 6.1-6.3.6 | Lab 7 due Simon |
+| `10011` | 3-Apr | Function calls | Assembly Functions | 6.3.7-6.9 |  |
+| `10100` | 8-Apr | Machine language |  |  | Lab 8 due SPI |
+| `10101` | 10-Apr | Single-cycle processor datapath | Pulse Width Modulation | 7.1-7.3.1 | PS 8 due |
+|  | 15-Apr | Single-cycle processor control, Verilog | Sidewalk Processor | 7.3, 7.6 | Lab 9 due Sound & Light |
+| `10110` | 17-Apr | Multicycle processor | Multicycle Processor | 7.4 | PS 9 due |
+| `10111` | 22-Apr | Pipelining | Hazards, add instrs | 7.5.1-2 | Lab 10 due Multicycle Control |
+| `11000` | 24-Apr | Advanced architecture: a sampler | Free time for Lab 10 | 7.7 | PS 10 due |
+| `11001` | 29-Apr | Case study: Processors | Processor Hall of Fame | 6.7, 8.7, 8.5 | Lab 11 due Multicycle CPU |
+|  | 1-May | Class summary and review | Final Review |  |  |
+|  |  |  |  |  |  |
 
 ## Text
 
@@ -28,7 +65,7 @@ Harris & Harris, *Digital Design and Computer Architecture, RISC-V Ed.*, Morgan 
 
 |                 |                                          |
 |-----------------|------------------------------------------|
-| Web page:       | <http://pages.hmc.edu/brake/class/e85/>  |
+| Web page:       | <https://hmc-e85.github.io/>             |
 | Email list:     | eng-85 \[at\] g.hmc.edu                  |
 | Discord Server: | See course introductory email for invite |
 
@@ -45,10 +82,6 @@ That said,
 -   Messages sent after 4:00 pm PT on Fridays or on the weekend will get a response the following Monday.
 
 ## Lab
-
-### Lab Kits
-
-E85 lab kits include a microcontroller board, breadboard, and various components. The Engineering Department has partially subsidized the kits so your cost is \$70. To purchase a board, complete this [E85 Kit Payment Form](https://docs.google.com/forms/d/e/1FAIpQLScJ7J9h97xHiba5nPAz7oITb7DErtLyiJR1QkZR2WEYhWmwQA/viewform) below and then go to the stockroom to pick the board up. If the kit fee presents a financial hardship, complete the [E85 Kit Payment Waiver Request](https://docs.google.com/forms/d/e/1FAIpQLScXPe7jHqtP8z8OSSCIPlme0QFUVC29oqA2fgMhRT-cAWqZtQ/viewform); waivers are handled by the staff and are never seen by the instructor.
 
 ### Software Requirements
 
@@ -77,13 +110,30 @@ By the end of this course, you should be able to:
 
 ## Grading
 
-| Item             | Weight |
-|------------------|--------|
-| Lecture Practice | 5%     |
-| Class Activities | 5%     |
-| Labs             | 30%    |
-| Problem Sets     | 25%    |
-| Exams            | 35%    |
+::::: columns
+::: {.column width="50%"}
+**E85**
+
+| Item                | Weight |
+|---------------------|--------|
+| In-class Activities | 5%     |
+| Labs                | 30%    |
+| Problem Sets        | 20%    |
+| Midterm             | 20%    |
+| Final               | 25%    |
+:::
+
+::: {.column width="50%"}
+**E85A**
+
+| Item                | Weight |
+|---------------------|--------|
+| In-class Activities | 5%     |
+| Labs                | 30%    |
+| Problem Sets        | 20%    |
+| Midterm             | 45%    |
+:::
+:::::
 
 Solutions to the labs and problem sets from previous semesters are undoubtedly floating around campus and on the web. You may **not** refer to solutions while doing the assignments; they must be your own work.
 
@@ -91,9 +141,9 @@ Solutions to the labs and problem sets from previous semesters are undoubtedly f
 
 ### Deadlines
 
-Assignment deadlines are shown on the Dates tab of the MOOC. Assignments are due at 23:10 UTC, which is 4:10 or 3:10 pm depending on daylight savings time.
+Labs and homework are due by the end of class. You may have a one-week extension on one assignment of your choice (except Lab 11) and are responsible for tracking this yourself under the honor code (no need to notify the instructor; just turn it in with the following week’s assignment). Your lowest problem set and lab grade will each be dropped. Please ration your extension and drops carefully lest you find yourself ill at the end of the semester and out of options. The class moves quickly and it is difficult catching up if you fall behind. Contact the Academic Deans ([academicdeans\@g.hmc.edu](mailto:academicdeans@g.hmc.edu)) if you have or anticipate a protracted situation; they can coordinate additional flexibility for this class and/or others.
 
-### Drops and Deadline Flexibillity
+### Drops and Deadline Flexibility
 
 Your lowest problem set and lab grade of the semester will each be dropped, as will your three lowest lecture practice assignments. The dropped lab and problem set are intended to accommodate illness, travel, and personal emergencies. However, if you have already used your drop and need flexibility on a second lab or problem set, please contact the instructor at least two days in advance for an extension. The class moves quickly and it is difficult to catch up if you fall behind. Handling extensions in the MOOC is cumbersome, so late lecture practice questions are not accepted.
 
@@ -101,75 +151,15 @@ Based on last year's experience, it is likely that multiple people in the class 
 
 ### Collaboration Policy
 
-You are welcome to discuss labs and problem sets with other students or with the instructor or lab assistants or tutors **after you have made an effort by yourself**. However, you must turn in your own work, not work identical to that of another student. For labs, asking classmates or tutors for help when you are stuck on a specific issue is encouraged (especially on difficulties with the tools and equipment), but sitting at adjacent computers and working through the lab together in lock-step is specifically prohibited. Pair/group programming is also prohibited. **It is an honor code violation to simply copy someone else's work.**
+You are welcome to discuss labs and problem sets with other students or with the instructor or lab assistants or tutors **after you have made an effort by yourself**. However, you must turn in your own work, not work identical to that of another student. For labs, asking classmates or tutors for help when you are stuck on a specific issue is encouraged (especially on difficulties with the tools and equipment), but sitting at adjacent computers and working through the lab together in lock-step is specifically prohibited. Pair/group programming is also prohibited, as is getting your answer from an AI tool, search engine, or other source that bypasses your own critical thought and opportunity to practice the material. **It is an honor code violation to simply copy someone else's work.**
 
 ### AI Policy
 
-AI tools like ChatGPT are an emerging and active area of research. Following the public release of ChatGPT in late 2022, large language models (LLMs) hit the mainstream and have been the subject of robust conversations about how educators and students should approach these tools. AI tools, whether in the form of an LLM or something else, are likely to have an impact on your career and work as an engineer. In this class, we will be approaching AI tools with a posture of cautious engagement. The guiding principle for the use of AI tools is that these tools must be used in the spirit of the assignment.
+An exception to the AI policy is that each week’s problem set will have one optional problem in which AI is required rather than prohibited. You can use ChatGPT or any other AI tool. The question will be worth one point of extra credit, not to bring the problem set total above 100%. You may photograph the question into the AI app, or cut and paste it into the prompt. Learning objectives include:
 
-To frame the discussion about AI in this class, here are three general ways that educators are approaching AI use in their classes[^1]:
-
-[^1]: See [this article](https://marcwatkins.substack.com/p/have-an-ai-policy-so-does-everyone) from [Marc Watkins](https://marcwatkins.org) for a more in-depth discussion.
-
-1.  Ban
-2.  Embrace
-3.  Critical exploration
-
-Each of these approaches has its merits in specific circumstances. The key is to ensure that the use of the tool is aligned with the overarching learning outcomes of the course or assignment. There are some instances where AI use is not aligned with learning. For example, it is important to understand the fundamentals of how to write accurate code in a Hardware Description Language (HDL) such as the SystemVerilog language we will learn in this class. Relying on a Large Language Model (LLM) like ChatGPT to write the code for you will supplant rather than support your ability to understand the important concepts for designing digital systems. Not to mention that ChatGPT, based on my experience, [writes really bad HDL](https://chat.openai.com/share/fc5e04e7-f19b-4aec-90b2-0b3a302f41f0)![^2]
-
-[^2]: This makes sense because most of the HDL code you find on the internet is pretty lousy. Garbage in, garbage out.
-
-There are other instances where an embrace of AI is worth considering. Maybe after building your own general understanding of SystemVerilog you want to experiment with an LLM to see if it can generate a template design that you can slightly modify for a new design. In this situation, the LLM is acting more like an advanced auto-complete tool. The key is that **you** possess the expertise to be able to understand and analyze whether the output is correct. In the spirit of full embrace, you may try to have an LLM write your code for you, comment your code, or write descriptions of what the code is doing. Embracing the AI tool full on will help you to quickly generate text, but the quality of the output may end up being incorrect or of poor quality. User beware.
-
-The third approach is in the middle of the previous two, approaching AI tools like LLMs with a cautious optimism and an eye towards reflection. Here, a user embraces the tool and engages their curiosity to prototype new ways in which the tool might be useful but is continually asking questions and reflecting on the approach and how the design of the tools influences the applications for which they are well suited. By diving deeply into how these tools work, analyzing their areas of strength and weakness, and experimenting with them with an attitude of critical curiosity, one can learn how these tools might be a valuable tool in the toolkit and other situations when they are best avoided. This approach also opens up space to ask questions about the array of ethical issues that must be discussed, including but not limited to: data privacy concerns, the environmental impacts of training these systems, alignment of AI tools with human values, bias, and the potentially dangerous ways in which these tools can be used.
-
-My own approach to AI use is that when we choose to use it, we should be using it as a [ladder and not a crutch](https://joshbrake.substack.com/p/reframing-the-disruption-of-chatgpt?utm_source=%2Fsearch%2Fladder%2520crutch&utm_medium=reader2). If and when we choose to use AI tools we should use it to extend our abilities but not in a way that might create unhealthy dependencies on it (e.g., not learning foundational programming concepts because ChatGPT can write the code for you). If you use AI tools in an unhealthy way, you are likely to be doing yourself more harm than good. In this vein, it is similar to other forms of academic dishonesty that supplant the learning intended as part of a given assignment or assessment.
-
-If you have any questions or are curious about exploring AI tools in this class, please reach out and ask. Our default posture will be the third approach of reflective engagement. In most instances this means that we will avoid the use of these tools since they will often be in direct opposition to the goals of learning the fundamental concepts. If you would like to use these tools in an assignment, please reach out to me and I would be happy to talk with you about it. In general you will be required to submit a quick justification of
-
-1.  What you would like to use the tool for
-2.  Why you think the use of AI is aligned with and not opposed to the learning goals of the assignment
-3.  A short reflection, submitted with the assignment, on your experience using AI on the assignment and what you learned
-
-## Schedule
-
-Readings for each lecture are listed on the schedule below. Many students say they have found the readings valuable and enjoyable. You'll get the most out of the class if you read the sections in advance of the class time and come with questions, and then reread as necessary when you work your problem sets and labs.
-
-This class is flipped in that you will see the content first in the MOOC and then work examples in class.  The examples are intended to reflect the concepts you need for the problem sets and labs, and previous semester students said that the time spent attending class generally is more than compensated by a reduction in time on the assignments. You will receive 5% of your grade to incentivize participating in the in-class activities. If you are feeling ill or are concerned you may have been exposed to COVID, please do not come to class. Contact the instructor(s) and you will get participation credit.
-
-| Lecture | Date   | MOOC Topics Due                         | Class Activity          | Readings          | Assignment                   |
-|------------|------------|------------|------------|------------|------------|
-| `0`     | 28-Aug | Introduction                            | Welcome: numbers        | 1.1-1.5           |                              |
-| `1`     | 30-Aug | Gates                                   | Soldering (Digital Lab) | 1.6-1.9, A1-A7    |                              |
-|         | 4-Sep  | Labor Day (No class)                    |                         |                   |                              |
-| `10`    | 6-Sep  | Combinational logic design              | Datasheets & Circuits   | 2.1-2.8           | PS 1 due                     |
-| `11`    | 11-Sep | Timing, sequential circuits             | Logic Design            | 2.9-2.10, 3.1-3.2 | Lab 1 due Digital Circuits   |
-| `100`   | 13-Sep | Finite state machines                   | FSM Design              | 3.3-3.4           | PS 2 due                     |
-| `101`   | 18-Sep | Dynamic discipline, metastability       | Timing Optimization     | 3.5-3.7           | Lab 2 due Comb Logic         |
-| `110`   | 20-Sep | Verilog, Part I                         | Verilog FSM             | 4.1-4.3           | PS 3 due                     |
-| `111`   | 25-Sep | Verilog, Part II                        | Verilog to Schematics   | 4.4-4.10          | Lab 3 due Structural FSM     |
-| `1000`  | 27-Sep | Arithmetic circuits                     | Block Design            | 5.1-5.2           | PS 4 due                     |
-| `1001`  | 2-Oct  | Fixed and floating-point numbers        | Number Examples         | 5.3               | Lab 4 due Behavioral FSM     |
-| `1010`  | 4-Oct  | Sequential building blocks, arrays      | Sequential Examples     | 5.4-5.7           | PS 5 due                     |
-| `1011`  | 9-Oct  | Midterm Review                          | Midterm Review          |                   | Lab 5 due Multicycle Control |
-|         | 11-Oct | No Class                                |                         |                   | Midterm                      |
-|         | 16-Oct | Fall Break                              |                         |                   |                              |
-| `1100`  | 18-Oct | C Programming                           | C Examples              | C.1-C.7           |                              |
-| `1101`  | 23-Oct | C Programming                           | C Examples              | C.8-C.11          |                              |
-| `1110`  | 25-Oct | Microcontrollers: Memory-mapped I/O     | SEGGER Embedded Studio  | 9.1-9.3.3         | PS 6 due                     |
-| `1111`  | 30-Oct | Parallel & serial interfacing, ADCs     | Lights & Switches       | 9.3               | Lab 6 due C Programming      |
-| `10000` | 1-Nov  | I/O libraries and examples              | SPI Accelerometer       | 9.3               | PS 7 due                     |
-| `10001` | 6-Nov  | Assembly language                       | Assembly Examples       | 6.1-6.3.6         | Lab 7 due Simon              |
-| `10010` | 8-Nov  | Function calls, machine language        | Assembly Functions      | 6.3.7-6.9         |                              |
-| `10011` | 13-Nov | Single-cycle processor datapath         | Pulse Width Modulation  | 7.1-7.3.1         | Lab 8 due SPI                |
-| `10100` | 15-Nov | Single-cycle processor control, Verilog | Sidewalk Processor      | 7.3, 7.6          | PS 8 due                     |
-| `10101` | 20-Nov | Multicycle processor                    | Multicycle Processor    | 7.4               | Lab 9 due Sound & Light      |
-|         | 22-Nov | Thanksgiving                            |                         |                   |                              |
-| `10110` | 27-Nov | Pipelining                              | Hazards, add instrs     | 7.5.1-2           | PS 9 due                     |
-| `10111` | 29-Dec | Advanced architecture: a sampler        | Free time for Lab 10    | 7.7               |                              |
-| `11000` | 4-Dec  | Advanced RISC-V Features                | Processor Hall of Fame  |                   | PS 10 due                    |
-| `11001` | 6-Dec  | Class summary and review                | Final Review            |                   | Lab 10 due Multicycle CPU    |
-|         | 15-Dec | Take home exam due 11:59 pm                 |                         |                   |                              |
+-   Begin to understand what AI is and is not capable of answering in this technical discipline
+-   Critically assess the quality of the answer, including whether the AI is hallucinating, and whether the solution is similar, better, or worse than what you would have done yourself in a reasonable amount of time.
+-   Explore modifying your prompt to get a better answer if the initial answer is unsatisfactory.
 
 ## Honor Code Violations
 
@@ -188,10 +178,26 @@ Students in this class are expected to follow the HMC honor code. An honor code 
 9.  **Use of Other Course Resources from Previous Semesters** You may not reference assignments (labs, problem sets, activities) of this course from previous semesters.
 10. **Retention of Course Resources** Assignments and exams from this course may not be committed to dorm repositories or otherwise used to help future students.
 
+## Health and Wellness
+
+College students often experience issues that may interfere with academic success such as academic stress,
+sleep problems, juggling responsibilities, life events, relationship concerns, or feelings of anxiety,
+hopelessness, or depression. If you or a friend is struggling, we strongly encourage you to seek support.
+Helpful, effective resources are available on campus, at no charge.
+
+-   If you are struggling with this class, please visit during office hours or contact an instructor by email.
+-   Check-in with an academic dean if you are struggling in courses or unsure what academic
+    resources are available at HMC by emailing [academicdeans@g.hmc.edu](mailto:academicdeans@g.hmc.edu).
+-   Reach out to The Office of Health and Wellness to discuss options available by
+    emailing [wellness@hmc.edu](mailto:wellness@hmc.edu).
+-   MCAPS provides crisis support services 24/7/365. Students can call us at 909-621-8202 and
+    press “1” at the prompt to speak with a crisis counselor. Other prompt options are available for
+    those not in crisis.
+
 ## Inclusiveness and Harassment
 
 We do difficult work in this class and everyone should feel comfortable engaging with the material. We explicitly want you to feel safe doing this work, so it is worth stating that the instructors are committed to making the class a safe space for everyone regardless of race, gender, ethnicity, sexual orientation, religion, and academic history. If you feel that you are experiencing a hostile environment, speak to an instructor immediately.
 
 ## Educational Accessibility
 
-HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at [ability\@g.hmc.edu](mailto:ability@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's disability resources officer.
+HMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at [ability@g.hmc.edu](mailto:ability@g.hmc.edu) to request accommodations. Students from the other Claremont Colleges should contact their home college's disability resources officer.
