@@ -1,0 +1,15 @@
+---
+title: Labs
+---
+
+- Lab 1: Electrical Characteristics of Logic Gates [[pdf](./pdf/Lab1.pdf)]
+- Lab 2: FPGA Tools and Combinational Logic Design [[pdf](./pdf/Lab2.pdf)]
+- Lab 3: Finite State Machine Design [[pdf](./pdf/Lab3.pdf)]
+- Lab 4: Behavioral Verilog FSM [[pdf](./pdf/Lab4.pdf)]
+- Lab 5: Music Keyboard [[pdf](./pdf/Lab5.pdf)]
+- Lab 6: Linear Algebra in C on a Microcontroller [[pdf](./pdf/Lab6.pdf)]
+- Lab 7: Simon [[pdf](./pdf/Lab7.pdf)]
+- Lab 8: Digital Level [[pdf](./pdf/Lab8.pdf)]
+- Lab 9: Airbag Trigger [[pdf](./pdf/Lab9.pdf)]
+- Lab 10: Multicycle Controller [[pdf](./pdf/Lab10.pdf)]
+- Lab 11: Multicycle Processor [[pdf](./pdf/Lab11.pdf)]
