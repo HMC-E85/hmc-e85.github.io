@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "syllabus/index.html",
+    "href": "syllabus/index.html",
+    "title": "E85 Syllabus",
+    "section": "",
+    "text": "Item\nInformation\n\n\n\n\nInstructors\nProf. Josh Brake, Prof. David Harris\n\n\nTutoring & Tau Beta Pi\nVikram Krishna, Madeleine Kan, Jessica Liu, Troy Kaufman, Roman De Santos"
+  },
+  {
+    "objectID": "syllabus/index.html#teaching-team",
+    "href": "syllabus/index.html#teaching-team",
+    "title": "E85 Syllabus",
+    "section": "",
+    "text": "Item\nInformation\n\n\n\n\nInstructors\nProf. Josh Brake, Prof. David Harris\n\n\nTutoring & Tau Beta Pi\nVikram Krishna, Madeleine Kan, Jessica Liu, Troy Kaufman, Roman De Santos"
+  },
+  {
+    "objectID": "syllabus/index.html#schedule",
+    "href": "syllabus/index.html#schedule",
+    "title": "E85 Syllabus",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nName\nInfo\nLocation\n\n\n\n\nLecture\nTR 1:15 - 2:30 pm\nSHAN 3481\n\n\nOffice Hours\nTBD\nDigital Lab\n\n\n\n“Office hours” is code for “come hang out.” You are encouraged to attend office hours to ask questions, get help with your labs, talk about careers and graduate school, or chat about something on your mind (whether it is related to this class, academics, or anything else). I am available more often than not, so try dropping me a line via Discord or email if you are having a problem with your lab or want to set up a time. You may also contact the lab assistant(s) for questions when I am not available.\nReadings for each lecture are listed on the schedule below. Many students say they have found the readings valuable and enjoyable. You’ll get the most out of the class if you read the sections in advance of the class time and come with questions, and then reread as necessary when you work your problem sets and labs.\n\n\n\n\n\n\n\n\n\n\n\nLecture\nDate\nTopic\nClass Activity\nReadings\nAssignment\n\n\n\n\n0\n21-Jan\nIntroduction: digital abstraction, numbers\nWelcome: numbers\n1.1-1.5\n\n\n\n1\n23-Jan\nLogic gates, static discipline, transistors\nSoldering (Digital Lab)\n1.6-1.9, A1-A7\n\n\n\n10\n28-Jan\nCombinational logic design\nDatasheets & Circuits\n2.1-2.8\nPS 1 due\n\n\n11\n30-Jan\nTiming, sequential circuits\nLogic Design\n2.9-2.10, 3.1-3.2\nLab 1 due Digital Circuits\n\n\n100\n4-Feb\nFinite state machines\nFSM Design\n3.3-3.4\nPS 2 due\n\n\n101\n6-Feb\nDynamic discipline, metastability\nTiming Optimization\n3.5-3.7\nLab 2 due Comb Logic\n\n\n110\n11-Feb\nHardware Description Languages: Verilog, Part I\nVerilog FSM\n4.1-4.3\nPS 3 due\n\n\n111\n13-Feb\nVerilog, Part II\nVerilog to Schematics\n4.4-4.10\nLab 3 due Structural FSM\n\n\n1000\n18-Feb\nArithmetic circuits\nBlock Design\n5.1-5.2\nPS 4 due\n\n\n1001\n20-Feb\nFixed and floating-point number systems\nNumber Examples\n5.3\nLab 4 due Behavioral FSM\n\n\n1010\n25-Feb\nSequential building blocks, arrays\nSequential Examples\n5.4-5.7\nPS 5 due\n\n\n1011\n27-Feb\nMidterm Review\nMidterm Review\n\nLab 5 due Multicycle Control\n\n\n1100\n4-Mar\nMidterm\n\n\nMidterm Due 2:30 pm\n\n\n1101\n6-Mar\nC Programming\nC Examples\nC.1-C.7\n\n\n\n1110\n11-Mar\nC Programming\nC Examples\nC.8-C.11\n\n\n\n1111\n13-Mar\nMicrocontrollers: Memory-mapped I/O\nSEGGER Embedded Studio\n9.1-9.3.3\nPS 6 due\n\n\n10000\n18-Mar\nParallel & serial interfacing, ADCs\nLights & Switches\n9.3-9.4\nLab 6 due C Programming\n\n\n\n20-Mar\nSpring Break\n\n\n\n\n\n\n25-Mar\nSpring Break\n\n\n\n\n\n10001\n27-Mar\nI/O libraries and examples\nSPI Accelerometer\n\nPS 7 due\n\n\n10010\n1-Apr\nAssembly language\nAssembly Examples\n6.1-6.3.6\nLab 7 due Simon\n\n\n10011\n3-Apr\nFunction calls\nAssembly Functions\n6.3.7-6.9\n\n\n\n10100\n8-Apr\nMachine language\n\n\nLab 8 due SPI\n\n\n10101\n10-Apr\nSingle-cycle processor datapath\nPulse Width Modulation\n7.1-7.3.1\nPS 8 due\n\n\n\n15-Apr\nSingle-cycle processor control, Verilog\nSidewalk Processor\n7.3, 7.6\nLab 9 due Sound & Light\n\n\n10110\n17-Apr\nMulticycle processor\nMulticycle Processor\n7.4\nPS 9 due\n\n\n10111\n22-Apr\nPipelining\nHazards, add instrs\n7.5.1-2\nLab 10 due Multicycle Control\n\n\n11000\n24-Apr\nAdvanced architecture: a sampler\nFree time for Lab 10\n7.7\nPS 10 due\n\n\n11001\n29-Apr\nCase study: Processors\nProcessor Hall of Fame\n6.7, 8.7, 8.5\nLab 11 due Multicycle CPU\n\n\n\n1-May\nClass summary and review\nFinal Review"
+  },
+  {
+    "objectID": "syllabus/index.html#text",
+    "href": "syllabus/index.html#text",
+    "title": "E85 Syllabus",
+    "section": "Text",
+    "text": "Text\nHarris & Harris, Digital Design and Computer Architecture, RISC-V Ed., Morgan Kaufmann 2021."
+  },
+  {
+    "objectID": "syllabus/index.html#electronic-communication",
+    "href": "syllabus/index.html#electronic-communication",
+    "title": "E85 Syllabus",
+    "section": "Electronic Communication",
+    "text": "Electronic Communication\n\n\n\nWeb page:\nhttps://hmc-e85.github.io/\n\n\nEmail list:\neng-85 [at] g.hmc.edu\n\n\nDiscord Server:\nSee course introductory email for invite\n\n\n\nBe sure to join the class Discord and check it regularly as it will be the main source of course-related communication for this semester.\n\nCommunication Policy\nPlease note that I do not always respond immediately to messages. In particular I typically do not check email or Discord between 6:00 pm and 6:00 am on weeknights, and I typically do not check these at all on weekends.\nThat said,\n\nMessages sent on a weekday (Monday-Friday) before 4:00 pm PT will get a response the same day.\nMessages sent after 4:00 pm PT Monday-Thursday will get a response the next day.\nMessages sent after 4:00 pm PT on Fridays or on the weekend will get a response the following Monday."
+  },
+  {
+    "objectID": "syllabus/index.html#lab",
+    "href": "syllabus/index.html#lab",
+    "title": "E85 Syllabus",
+    "section": "Lab",
+    "text": "Lab\n\nSoftware Requirements\nYou can do your lab assignments on the computers in the Digital Lab in the Parsons basement, or on your own computer. You will be using ModelSim-Intel(R), which runs on Windows and Linux. For Mac users, it will also run in a virtual machine installation of Windows using Parallels, VM Fusion, or VirtualBox. For the second half of the class, you’ll also be using SEGGER Embedded Studio, which runs on Windows, Mac, and Linux.\nTo install ModelSim, navigate to the download page on Intel’s website to download the most recent version of the ModelSim software. The latest release as of this writing is 20.1.1.\nIf you’re unable to access ModelSim in the digital lab or on your own computer, reach out to an instructor to discuss potential workarounds."
+  },
+  {
+    "objectID": "syllabus/index.html#course-learning-objectives",
+    "href": "syllabus/index.html#course-learning-objectives",
+    "title": "E85 Syllabus",
+    "section": "Course Learning Objectives",
+    "text": "Course Learning Objectives\nDigital systems have revolutionized our world. From television to cell phones to GPS to warfare to medicine to automobiles, computers and digital processing have reshaped the way we live and work. Computers are also a vital part of daily practice in every field of science and engineering.\nPrevious generations of engineers learned the “nuts and bolts” of the profession by doing things like disassembling and rebuilding engines. As technology has advanced, cars have become too complicated for the layperson to work on. Ironically, the same advances have made computers much easier to build. While most fields of engineering require extensive mathematics and complicated analysis of even rather simple components, digital systems merely require counting from 0 to 1. Their challenge, instead, is in combining many simple building blocks into a complex whole. Field programmable gate arrays (FPGAs), containing the equivalent of thousands or millions of logic gates, make it possible to build these complex systems in the lab without the tedium of manually connecting components. In this class, you will build your own microprocessor and test it on a FPGA. In the process, you will master the art and science of digital design. You will learn to speak to and control processors in their native tongue, assembly language. And you will put all the pieces together to demystify how a computer works.\nAs you probably know, very few complex systems work the first time you put them together. Engineers must become good at systematically and efficiently debugging their creations. One of the course objectives that can be frustrating but vitally important is to learn to teach yourself professional-strength computer-aided design tools and to use these tools to debug systems.\nBy the end of this course, you should be able to:\n\nBuild digital systems at levels of abstraction from transistors through circuits and logic.\nManage complexity using the digital abstraction, static and dynamic disciplines, and hierarchical design.\nDesign and implement combinational and sequential digital circuits using schematics and hardware description languages.\nAnalyze and trade off performance, cost, and power consumption of digital circuits.\nBegin the practice of implementing and debugging digital systems with appropriate lab techniques including breadboarding and interpreting datasheets.\nSimulate digital circuits"
+  },
+  {
+    "objectID": "syllabus/index.html#grading",
+    "href": "syllabus/index.html#grading",
+    "title": "E85 Syllabus",
+    "section": "Grading",
+    "text": "Grading\n\n\nE85\n\n\n\nItem\nWeight\n\n\n\n\nIn-class Activities\n5%\n\n\nLabs\n30%\n\n\nProblem Sets\n20%\n\n\nMidterm\n20%\n\n\nFinal\n25%\n\n\n\n\nE85A\n\n\n\nItem\nWeight\n\n\n\n\nIn-class Activities\n5%\n\n\nLabs\n30%\n\n\nProblem Sets\n20%\n\n\nMidterm\n45%\n\n\n\n\n\nSolutions to the labs and problem sets from previous semesters are undoubtedly floating around campus and on the web. You may not refer to solutions while doing the assignments; they must be your own work."
+  },
+  {
+    "objectID": "syllabus/index.html#course-policies",
+    "href": "syllabus/index.html#course-policies",
+    "title": "E85 Syllabus",
+    "section": "Course Policies",
+    "text": "Course Policies\n\nDeadlines\nLabs and homework are due by the end of class. You may have a one-week extension on one assignment of your choice (except Lab 11) and are responsible for tracking this yourself under the honor code (no need to notify the instructor; just turn it in with the following week’s assignment). Your lowest problem set and lab grade will each be dropped. Please ration your extension and drops carefully lest you find yourself ill at the end of the semester and out of options. The class moves quickly and it is difficult catching up if you fall behind. Contact the Academic Deans (academicdeans@g.hmc.edu) if you have or anticipate a protracted situation; they can coordinate additional flexibility for this class and/or others.\n\n\nDrops and Deadline Flexibility\nYour lowest problem set and lab grade of the semester will each be dropped, as will your three lowest lecture practice assignments. The dropped lab and problem set are intended to accommodate illness, travel, and personal emergencies. However, if you have already used your drop and need flexibility on a second lab or problem set, please contact the instructor at least two days in advance for an extension. The class moves quickly and it is difficult to catch up if you fall behind. Handling extensions in the MOOC is cumbersome, so late lecture practice questions are not accepted.\nBased on last year’s experience, it is likely that multiple people in the class will experience prolonged illness and/or mental health challenges during these difficult times. If you find yourself in this circumstance, please reach out to the Academic Deans as soon as you can. They are great advocates who can help arrange flexibility across your multiple classes. E85 will make unusual accommodations as needed in such circumstances. The sooner you report a problem, the more likely it is that the deans can help you find a graceful solution.\n\n\nCollaboration Policy\nYou are welcome to discuss labs and problem sets with other students or with the instructor or lab assistants or tutors after you have made an effort by yourself. However, you must turn in your own work, not work identical to that of another student. For labs, asking classmates or tutors for help when you are stuck on a specific issue is encouraged (especially on difficulties with the tools and equipment), but sitting at adjacent computers and working through the lab together in lock-step is specifically prohibited. Pair/group programming is also prohibited, as is getting your answer from an AI tool, search engine, or other source that bypasses your own critical thought and opportunity to practice the material. It is an honor code violation to simply copy someone else’s work.\n\n\nAI Policy\nAn exception to the AI policy is that each week’s problem set will have one optional problem in which AI is required rather than prohibited. You can use ChatGPT or any other AI tool. The question will be worth one point of extra credit, not to bring the problem set total above 100%. You may photograph the question into the AI app, or cut and paste it into the prompt. Learning objectives include:\n\nBegin to understand what AI is and is not capable of answering in this technical discipline\nCritically assess the quality of the answer, including whether the AI is hallucinating, and whether the solution is similar, better, or worse than what you would have done yourself in a reasonable amount of time.\nExplore modifying your prompt to get a better answer if the initial answer is unsatisfactory."
+  },
+  {
+    "objectID": "syllabus/index.html#honor-code-violations",
+    "href": "syllabus/index.html#honor-code-violations",
+    "title": "E85 Syllabus",
+    "section": "Honor Code Violations",
+    "text": "Honor Code Violations\nStudents in this class are expected to follow the HMC honor code. An honor code policy appears below and prescribes behavior that is considered honorable, so read those maxims and follow them closely. Any honor code violations will be handled through JB."
+  },
+  {
+    "objectID": "syllabus/index.html#honor-code-policy",
+    "href": "syllabus/index.html#honor-code-policy",
+    "title": "E85 Syllabus",
+    "section": "Honor Code Policy",
+    "text": "Honor Code Policy\n\nAll students enrolled in this course are bound by the HMC Honor Code. More information on the HMC Honor Code can be found in the HMC Student Handbook.\nIt is your responsibility to determine whether your actions adhere to the HMC Honor Code. If this document does not clarify the legitimacy of a particular action, you should contact the course instructor and request clarification.\nWork you submit for individual assignments should be your own, and you should complete all assignments based on your own understanding of the underlying material. If you work with, or receive help from, another individual on an assignment, provide a written acknowledgement in complete sentences that includes the person’s name and the nature of the help.\nThis document is not meant to be an exhaustive list of every possible Honor Code violation. Infractions not explicitly mentioned here may still violate the Honor Code.\nBoundaries of Collaboration Verbal collaboration with other students on individual assignments is encouraged AFTER you have given serious thought to each component yourself. However, all submitted written work should be written by yourself individually, and not a collaborative effort or copied from a common source (e.g., a chalkboard). It is NOT acceptable to work on labs in lockstep with another classmate.\nUse of Computer Software The use of graphing calculators and computer software to aid in course work is acceptable, as long as it does not substitute for an understanding of the course material.\nUse of Web Resources The use of Internet resources to aid in course work is acceptable, as long it does not substitute for an understanding of the course material. Plagiarism and direct copying from online (or any other) sources is strictly prohibited.\nUse of Your Own Work from Previous Semesters If you have previously attempted this course, you may resubmit your work from previous semesters as this semester’s coursework, as long as you understand the underlying material.\nUse of Other Course Resources from Previous Semesters You may not reference assignments (labs, problem sets, activities) of this course from previous semesters.\nRetention of Course Resources Assignments and exams from this course may not be committed to dorm repositories or otherwise used to help future students."
+  },
+  {
+    "objectID": "syllabus/index.html#health-and-wellness",
+    "href": "syllabus/index.html#health-and-wellness",
+    "title": "E85 Syllabus",
+    "section": "Health and Wellness",
+    "text": "Health and Wellness\nCollege students often experience issues that may interfere with academic success such as academic stress, sleep problems, juggling responsibilities, life events, relationship concerns, or feelings of anxiety, hopelessness, or depression. If you or a friend is struggling, we strongly encourage you to seek support. Helpful, effective resources are available on campus, at no charge.\n\nIf you are struggling with this class, please visit during office hours or contact an instructor by email.\nCheck-in with an academic dean if you are struggling in courses or unsure what academic resources are available at HMC by emailing academicdeans@g.hmc.edu.\nReach out to The Office of Health and Wellness to discuss options available by emailing wellness@hmc.edu.\nMCAPS provides crisis support services 24/7/365. Students can call us at 909-621-8202 and press “1” at the prompt to speak with a crisis counselor. Other prompt options are available for those not in crisis."
+  },
+  {
+    "objectID": "syllabus/index.html#inclusiveness-and-harassment",
+    "href": "syllabus/index.html#inclusiveness-and-harassment",
+    "title": "E85 Syllabus",
+    "section": "Inclusiveness and Harassment",
+    "text": "Inclusiveness and Harassment\nWe do difficult work in this class and everyone should feel comfortable engaging with the material. We explicitly want you to feel safe doing this work, so it is worth stating that the instructors are committed to making the class a safe space for everyone regardless of race, gender, ethnicity, sexual orientation, religion, and academic history. If you feel that you are experiencing a hostile environment, speak to an instructor immediately."
+  },
+  {
+    "objectID": "syllabus/index.html#educational-accessibility",
+    "href": "syllabus/index.html#educational-accessibility",
+    "title": "E85 Syllabus",
+    "section": "Educational Accessibility",
+    "text": "Educational Accessibility\nHMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at ability@g.hmc.edu to request accommodations. Students from the other Claremont Colleges should contact their home college’s disability resources officer."
+  },
+  {
+    "objectID": "home/index.html",
+    "href": "home/index.html",
+    "title": "E85",
+    "section": "",
+    "text": "This website has the syllabus as well as links to some helpful resources for E85 this semester."
+  },
+  {
+    "objectID": "home/index.html#welcome-to-e85",
+    "href": "home/index.html#welcome-to-e85",
+    "title": "E85",
+    "section": "",
+    "text": "This website has the syllabus as well as links to some helpful resources for E85 this semester."
+  },
+  {
+    "objectID": "home/index.html#helpful-links",
+    "href": "home/index.html#helpful-links",
+    "title": "E85",
+    "section": "Helpful Links",
+    "text": "Helpful Links\n\nCourse Details\n\nCourse Syllabus\nSchedule\nTextbook\n\n\n\nTools\n\nSegger Embedded Studio\nPlatformIO\nCompiler Explorer\nAssembler/Disassembler\nWebFloat\n\n\n\nReferences\n\nSystemVerilog Spec\nRISC-V Spec\nRED-V Board\nFE310 Manual\nFE310 Datasheet\nLIS3DH Datasheet\nLED Matrix Datasheet\n\n\n\nOld Semesters\n\nFall 2022\nSpring 2022\nFall 2021\nFall 2019\nSpring 2018\nSpring 2017\nFall 2010\nFall 2007\nSpring 2001"
+  }
+]
