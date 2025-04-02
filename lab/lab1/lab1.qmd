@@ -18,36 +18,55 @@ This tutorial covers the breadboard, multimeter, oscilloscope, and function gene
 
 You may use two different styles of breadboards in the lab. The Global Specialties protoboards, shown in Figure 1, have a convenient built-in power supply and LEDs, switches, and a basic function generator. They must stay at the lab stations in the Digital Lab. The other style is the small breadboard of Figure 2 like the ones you may have used in other classes. It lacks the supporting features, but you can check one out from the stock room and work from any convenient place.
 
-|  |  |
-| --- | --- |
-| ![](data:image/jpeg;base64...) | ![](data:image/tiff;base64...) |
-| **Figure 1: Large Breadboard. Video introduction available.** | **Figure 2: Small Breadboard** |
+::: {#fig-breadboards layout-ncol=2}
+![Large Breadboard. Video introduction available.](images/large-breadboard.png){#fig-large-breadboard}
+
+![Small Breadboard](images/small-breadboard.png){#fig-small-breadboard}
+
+Breadboards
+:::
 
 Familiarize yourself with the breadboard you’re going to use. Either is sufficient for the course. Use a multimeter and some bits of wire to check which rows in the breadboard are connected.
 
-* *Global Specialties Breadboard*: Use the ohmmeter mode of the multimeter to confirm that horizontal rows of five holes are connected. Vertical columns of five holes are connected and intended for power and ground, but note that the top and bottom half of each column is not connected on this breadboard, making it easy to accidentally not power your circuits. Refer to the video for a demonstration. You can apply inputs using the logic switches and check outputs using the logic indicators shown in Figure 3. Be sure to configure the switches and indicators for 5 volt CMOS levels by making sure the voltage switches are both in the +5 volt position (not variable voltage) and the logic family switch is in the CMOS position. Refer to the video for a demonstration.
+#### Global Specialties Breadboard
 
-![](data:image/png;base64...) ![](data:image/png;base64...)
+Use the ohmmeter mode of the multimeter to confirm that horizontal rows of five holes are connected. Vertical columns of five holes are connected and intended for power and ground, but note that the top and bottom half of each column is not connected on this breadboard, making it easy to accidentally not power your circuits. Refer to the video for a demonstration. You can apply inputs using the logic switches and check outputs using the logic indicators shown in Figure 3. Be sure to configure the switches and indicators for 5 volt CMOS levels by making sure the voltage switches are both in the +5 volt position (not variable voltage) and the logic family switch is in the CMOS position. Refer to the video for a demonstration.
 
-**Figure 3: Logic Indicators and Switches.**
+::: {#fig-logic-indicators-and-switches layout-ncol=2}
+![](images/large-breadboard-logic-indicators.png)
 
-* *Small breadboard*: Horizontal rows of five holes are connected and each entire vertical column is connected. The vertical columns are connected and intended for power (red) and ground (blue or black). On this breadboard, you can apply inputs by running wires from the power or ground columns.
+![](images/large-breadboard-switches.png)
 
-You can also use the Wavetek logic probe shown in Figure 4 to check voltage levels.
+Logic Indicators and Switches.
+:::
 
-![](data:image/jpeg;base64...)
 
-**Figure 4: Wavetek Logic Probe**
+#### Small breadboard
 
-* To use a logic probe, connect the reference (black mini-alligator clip) to ground and the high supply (red mini-grabber) to Vcc, which is +5V in our case. The probe will indicate whether you touch a logic **HI** or a logic **LO** output on your board, assuming you are using the same +5V and ground to power your board as well as the logic probe.
-  + The **TTL**/**CMOS** switch should be in the **CMOS** position if using CMOS parts.
-  + Leave the **MEM**/**PULSE** switch in the **PULSE** position.
+Horizontal rows of five holes are connected and each entire vertical column is connected. The vertical columns are connected and intended for power (red) and ground (blue or black). On this breadboard, you can apply inputs by running wires from the power or ground columns.
 
-When you are done building circuits, return the components to the supply drawers. Use the IC extractor from Figure 5 to carefully rock chips out without bending the pins. If you have reason to suspect a chip was damaged, throw it in the trash rather than making your classmates unhappy.[[1]](#footnote-1)
+You can also use the Wavetek logic probe shown in @fig-wavetek-logic-probe to check voltage levels.
 
-![](data:image/tiff;base64...)
+::: {#fig-wavetek-logic-probe}
+![](images/wavetek-logic-probe.png)
 
-**Figure 5: IC Extractor**
+Wavetek Logic Probe
+:::
+
+- To use a logic probe, connect the reference (black mini-alligator clip) to ground and the high supply (red mini-grabber) to Vcc, which is +5V in our case. The probe will indicate whether you touch a logic **HI** or a logic **LO** output on your board, assuming you are using the same +5V and ground to power your board as well as the logic probe.
+  - The **TTL**/**CMOS** switch should be in the **CMOS** position if using CMOS parts.
+  - Leave the **MEM**/**PULSE** switch in the **PULSE** position.
+
+When you are done building circuits, return the components to the supply drawers. Use the IC extractor from Figure 5 to carefully rock chips out without bending the pins. If you have reason to suspect a chip was damaged, throw it in the trash rather than making your classmates unhappy. [^1]
+
+[^1]: If a chip has given you particular grief, you might want to take it home instead. Glue some googly eyes by pins 1 and 14, and a cute wire tail on the bottom, and start a farm of chip bugs.
+
+::: {#fig-ic-extractor}
+
+![](images/ic-puller.png)
+
+Integrated Circuit (IC) Extractor 
+:::
 
 Taking the time to neatly wire will usually save you time in the long run because your circuit will be easier to debug. Never run a wire directly over a chip because you may find you need to remove and replace the chip.
 
@@ -81,15 +100,19 @@ Put the resistors back in the supply cabinet when you are done.
 
 An oscilloscope can be used to measure repetitive (periodic) signals or one-time events. Unlike a multimeter, it plots voltage vs. time, which is essential for debugging transient problems. Figure 6 shows the Agilent 54622D oscilloscopes in the lab. **Auto** mode is easy for periodic signals, but for one-time events you’ll need **Single** mode. Many interesting digital events thus require **Single** mode. Refer to the video to see how to use the oscilloscope and signal generator.
 
-![](data:image/png;base64...)
+::: {#fig-oscilloscope}
+![](images/oscilloscope-annotated.png)
 
-**Figure 6: Labelled Guide to Navigating the Agilent 54622D Oscilloscope**
+Labelled Guide to Navigating the Agilent 54622D 
+:::
 
 To measure a one-time event such as a button press, press the **Mode/Coupling** button to get to the mode menu. Choose **Single** (on some scopes, **Normal** as seen in Figure 7) by pressing the soft button under the mode menu of the screen. To measure a repetitive event such as a square wave, choose **Auto**. Next, click on the Edge button. Select the channel of interest (e.g. channel 1) and whether to trigger on the rising or falling edge. Adjust the Trigger Level knob to the midpoint of your expected event (e.g. 2.5 V).
 
-![](data:image/png;base64...)
+::: {#fig-oscilloscpe-modes}
+![](images/oscilloscope-mode.png)
 
-**Figure 7: Setting Mode**
+Setting Mode
+:::
 
 You will usually have to adjust the time and voltage knobs to set the appropriate horizontal and vertical scales for the oscilloscope. That means you have to have a good idea of what you expect to see so that you can set the right scale to see it.
 
@@ -103,33 +126,46 @@ Sometimes students leave the oscilloscope in a weird configuration. If you are f
 
 A function generator produces periodic or arbitrary time varying voltages. In this class, you will mostly be interested in generating square waves that alternate between 0 and 5 V at a specific frequency.
 
-The Global Specialties have a basic on-board function generator shown in Figure 8. Set the botton at the bottom to square (not sine or triangle). Use the top buttons and sliders to change the frequency.
+The Global Specialties have a basic on-board function generator shown in Figure 8. Set the button at the bottom to square (not sine or triangle). Use the top buttons and sliders to change the frequency.
 
-![](data:image/png;base64...)
+::: {#fig-function-generator-breadboard}
+![](images/large-breadboard-function-generator.png)
 
-**Figure 8: Function Generator on Large Breadboard**
+Function Generator on Large Breadboard
+:::
 
 The HP 33120A function generators in the lab (Figure 9) can produce more precise waveforms at higher frequencies. Press the square wave button to generate the signal alternating between low and high. Press the Freq button and adjust the frequency with the knob. Use the Ampl and Offset buttons to set the low and high levels. For example, to oscillate between 0 and 5 volts, set Ampl to 5 and Offset to 2.5 (the average level of the output). You will need a cable with a BNC connector on one end and two alligator clips on the other to connect the function generator output to your breadboard.
 
-![](data:image/png;base64...)
+::: {#fig-function-generator}
+![](images/hp-function-generator.png)
 
-**Figure 9: 33120A 15MHz Function Generator**
+33120A 15MHz Function Generator
+:::
 
 Set up a function generator to produce a 1.0 KHz square wave oscillating from 0 to 5 V. Configure the oscilloscope in Auto mode and observe the square wave. This is a simple repetitive signal so you can use the AutoScale button to set up the time and voltage scales (but beware that autoscale can get you in trouble when you aren’t measuring repetitive signals). Use the Quick Measurement buttons (see Figure 10) to measure the frequency and amplitude. Also learn to use the cursors (Figure 11) to make these measurements manually.
 
-![](data:image/png;base64...)
+::: {#fig-oscilloscope-automatic-measurement}
+![](images/oscilloscope-measurement-menu.png)
 
-**Figure 10: Automatic Measurement Menu**
+Automatic Measurement Menu
+:::
 
-**![](data:image/png;base64...)**
 
-**Figure 11: Cursors Menu**
+::: {#fig-oscilloscope-automatic-measurement}
+![](images/oscilloscope-measurements.png)
+
+Cursors Menu
+:::
 
 ## Gates, Switches, and LEDs
 
-The circuit shown below has a pushbutton switch, two light-emitting diodes (LEDs), and two inverters ([74HC04 datasheet](http://pages.hmc.edu/harris/class/e85/74HC04.pdf))[[2]](#footnote-2).
+The circuit shown below has a pushbutton switch, two light-emitting diodes (LEDs), and two inverters ([74HC04 datasheet](http://pages.hmc.edu/harris/class/e85/74HC04.pdf)) [^2]
 
-![](data:image/png;base64...)
+[^2]: You can find the pinouts of common 74-series logic gates in Appendix A.2.1 of the textbook (online and on the class web site) and the [74HC04 datasheet](http://pages.hmc.edu/harris/class/e85/74HC04.pdf) in Appendix A.5 or on the class website.
+
+::: {#fig-logic-circuit}
+![](images/logic-circuit.png)
+:::
 
 * Select appropriate resistor values for R1-R3 by considering current flow in the circuit. Use the datasheet to find the inverter input current. Most LEDs can pass 20mA of current continuously without damage, but about 10mA of LED current is sufficient to light up the LEDs used in this class.
 * Build the circuit on a breadboard..
@@ -149,10 +185,10 @@ Please put your components back in the supply cabinet if you are certain they wo
   + Measure the input and output voltages with a multimeter or oscilloscope.
   + Beware: discrete MOS transistors are static sensitive. Ground yourself by touching a large metal object before handling your transistors.
   + The source of each transistor is connected to its body within the package. Therefore, be sure to connect the source of the nMOS to ground and the source of the pMOS to VDD so you don’t turn on any internal diodes inadvertently.
-  + The circuit has a high gain in the forbidden zone and substantial capacitance between the output and input, so it is prone to oscillate, especially if you have long cables (with high inductance) to your power supply and input. If you have oscillation problems, you may be able to resolve them by placing a capacitor (e.g. 1 F) between power and ground and/or between the input and ground on your breadboard near the circuit. This is called a bypass or decoupling capacitor and stabilizes the power supply and input to reduce the risk of oscillation.
+  + The circuit has a high gain in the forbidden zone and substantial capacitance between the output and input, so it is prone to oscillate, especially if you have long cables (with high inductance) to your power supply and input. If you have oscillation problems, you may be able to resolve them by placing a capacitor (e.g., 1 µF) between power and ground and/or between the input and ground on your breadboard near the circuit. This is called a bypass or decoupling capacitor and stabilizes the power supply and input to reduce the risk of oscillation.
 * Adjust the input voltage and record the output. Enter your data into a spreadsheet or your favorite plotting program and generate a plot of the voltage transfer characteristic (VTC).
   + Be sure to take a minimum of 7 data points, enough so that you can see the interesting parts of the curve to capture it faithfully (20 or more is not unreasonable), and show the actual data points in your graph.
-* Determine VIH, VIL, VOH, and VOL.
+* Determine $V_\text{IH}$, $V_\text{IL}$, $V_\text{OH}$, and $V_\text{OL}$.
 * Calculate the high and low noise margins.
 
 ## Ring Oscillator
@@ -165,18 +201,35 @@ With logic gates, we send an input in and get an output out. That output often s
 * Capture the output on the oscilloscope and compare with your expectations.
 * Measure the period and frequency of the output. From this measurement, calculate the average propagation delay of an individual inverter.
 * Touch the wires and observe the frequency change. Why does the frequency change?
-* Measure the current consumption of the circuit with an ammeter between 5V and the VCC pin of the chip[[3]](#footnote-3).
+* Measure the current consumption of the circuit with an ammeter between 5V and the VCC pin of the chip [^3]
 * Now build a new circuit with all of the inputs of the 74HC04 chip grounded. Do not leave the output of an individual inverter connected to the input of another.
 * Measure the quiescent current consumption of the 74HC04 chip. Is it within the specification of the datasheet? Explain any discrepancies.
 * Why is the power consumption of the ring oscillator higher than the quiescent current consumption of the grounded chip?
 
-![](data:image/png;base64...)
+[^3]: To measure supply current of a chip, you must remove the wire connecting the VCC pin to the 5V power supply and replace it with the ammeter. The ammeter must have the leads in the proper receptacles (different than for voltage measurement) and be on the DC current scale. If you place the ammeter in parallel with your chip (e.g. one lead to power supply and one to ground), you’ll create a short circuit between power and ground and probably blow out the fuse on your ammeter. Refer to the videos for a demonstration.
+
+::: {#fig-ring-oscillator}
+![](images/ring-oscillator.png)
+
+Ring oscillator schematic.
+:::
 
 ## Full Adder
 
-Design a *full adder*. The inputs are A, B, and Cin. The outputs are S and Cout. The full adder computes {Cout, S} = A + B + Cin. In other words, it sums the three inputs to produce a two-bit result, with S being the least significant bit and Cout being the most significant bit. Cin and Cout are called the carries. For example, if A = 1, B = 0, and Cin = 1, the result is 1 + 0 + 1 = 210 = 102. Thus, the sum is 0 and the carry out is 1. Although the logic for a full adder is in the textbook and many other places, please work it out yourself from first principles.
+Design a *full adder*. The inputs are $A$, $$B$, and $C_\text{in}$. The outputs are $S$ and $C_\text{out}$. 
+The full adder computes $\{C_\text{out}, S\} = A + B + C_\text{in}$.
+In other words, it sums the three inputs to produce a two-bit result, with $S$ being the least significant bit and $C_\text{out}$ being the most significant bit.
+$C_\text{in}$ and $C_\text{out}$ are called the carries.
+For example, if $A = 1$, $B = 0$, and $C_\text{in} = 1$, the result is 1 + 0 + 1 = 210 = 102. 
+Thus, the sum is 0 and the carry out is 1.
+Although the logic for a full adder is in the textbook and many other places, please work it out yourself from first principles.
 
-![](data:image/png;base64...)
+
+::: {#fig-full-adder-symbol}
+![](images/full-adder.png)
+
+Full adder symbol.
+::: 
 
 * Write the truth table below for your full adder.
 
@@ -219,7 +272,3 @@ Design a *full adder*. The inputs are A, B, and Cin. The outputs are S and Cout.
     c. Do your measured outputs match your truth table in all eight cases?
 
 Please indicate any bugs you found in this lab manual, or any suggestions you would have to improve the lab.
-
-1. If a chip has given you particular grief, you might want to take it home instead. Glue some googly eyes by pins 1 and 14, and a cute wire tail on the bottom, and start a farm of chip bugs. [↑](#footnote-ref-1)
-2. You can find the pinouts of common 74-series logic gates in Appendix A.2.1 of the textbook (online and on the class web site) and the [74HC04 datasheet](http://pages.hmc.edu/harris/class/e85/74HC04.pdf) in Appendix A.5 or on the class website. [↑](#footnote-ref-2)
-3. To measure supply current of a chip, you must remove the wire connecting the VCC pin to the 5V power supply and replace it with the ammeter. The ammeter must have the leads in the proper receptacles (different than for voltage measurement) and be on the DC current scale. If you place the ammeter in parallel with your chip (e.g. one lead to power supply and one to ground), you’ll create a short circuit between power and ground and probably blow out the fuse on your ammeter. Refer to the videos for a demonstration. [↑](#footnote-ref-3)
