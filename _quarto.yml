@@ -7,11 +7,10 @@ project:
 website:
   title: "E85"
   navbar:
-    left:
-      - href: syllabus/
-        text: Syllabus
-      - href: resources/
-        text: Resources
+    right:
+      - icon: github
+        href: https://github.com/HMC-E85/E85
+        aria-label: GitHub
 
 format:
   html:
