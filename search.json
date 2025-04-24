@@ -98,27 +98,6 @@
     "text": "Educational Accessibility\nHMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at ability@g.hmc.edu to request accommodations. Students from the other Claremont Colleges should contact their home college’s disability resources officer."
   },
   {
-    "objectID": "home/index.html",
-    "href": "home/index.html",
-    "title": "E85",
-    "section": "",
-    "text": "This website has the syllabus as well as links to some helpful resources for E85 this semester."
-  },
-  {
-    "objectID": "home/index.html#welcome-to-e85",
-    "href": "home/index.html#welcome-to-e85",
-    "title": "E85",
-    "section": "",
-    "text": "This website has the syllabus as well as links to some helpful resources for E85 this semester."
-  },
-  {
-    "objectID": "home/index.html#helpful-links",
-    "href": "home/index.html#helpful-links",
-    "title": "E85",
-    "section": "Helpful Links",
-    "text": "Helpful Links\n\nCourse Details\n\nCourse Syllabus\nSchedule\nTextbook\n\n\n\nTools\n\nSegger Embedded Studio\nPlatformIO\nCompiler Explorer\nAssembler/Disassembler\nWebFloat\n\n\n\nReferences\n\nSystemVerilog Spec\nRISC-V Spec\nRED-V Board\nFE310 Manual\nFE310 Datasheet\nLIS3DH Datasheet\nLED Matrix Datasheet\n\n\n\nOld Semesters\n\nFall 2022\nSpring 2022\nFall 2021\nFall 2019\nSpring 2018\nSpring 2017\nFall 2010\nFall 2007\nSpring 2001"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "HMC E85",
@@ -145,5 +124,19 @@
     "title": "HMC E85",
     "section": "Handouts & Resources",
     "text": "Handouts & Resources\nGithub Repo with Starter Code\nRISC-V Quick Reference"
+  },
+  {
+    "objectID": "index.html#welcome-to-e85",
+    "href": "index.html#welcome-to-e85",
+    "title": "HMC E85",
+    "section": "Welcome to E85!",
+    "text": "Welcome to E85!\nThis website has the syllabus as well as links to some helpful resources for E85 this semester."
+  },
+  {
+    "objectID": "index.html#helpful-links",
+    "href": "index.html#helpful-links",
+    "title": "HMC E85",
+    "section": "Helpful Links",
+    "text": "Helpful Links\n\nCourse Details\n\nTextbook\n\n\n\nTools\n\nSegger Embedded Studio\nPlatformIO\nCompiler Explorer\nAssembler/Disassembler\nWebFloat\n\n\n\nReferences\n\nSystemVerilog Spec\nRISC-V Spec\nRED-V Board\nFE310 Manual\nFE310 Datasheet\nLIS3DH Datasheet\nLED Matrix Datasheet\n\n\n\nOld Semesters\n\nFall 2022\nSpring 2022\nFall 2021\nFall 2019\nSpring 2018\nSpring 2017\nFall 2010\nFall 2007\nSpring 2001"
   }
 ]
