@@ -1,0 +1,81 @@
+---
+title: HMC E85
+permalink: /
+---
+
+## Administrative
+
+[Syllabus](./assets/syllabus.pdf)
+
+## Course Resources
++-----------------------------------+----------------------------------+-----------------------------------------------+
+| Labs                              | Problem Sets                     | Lectures                                      |
++===================================+==================================+===============================================+
+| [Lab 1](./assets/labs/Lab1.pdf)   | [PS 1](./assets/psets/ps1.pdf)   | [Chapter 1](./assets/slides/DDCArv_Ch1.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 2](./assets/labs/Lab2.pdf)   | [PS 2](./assets/psets/ps2.pdf)   | [Chapter 2](./assets/slides/DDCArv_Ch2.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 3](./assets/labs/Lab3.pdf)   | [PS 3](./assets/psets/ps3.pdf)   | [Chapter 3](./assets/slides/DDCArv_Ch3.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 4](./assets/labs/Lab4.pdf)   | [PS 4](./assets/psets/ps4.pdf)   | [Chapter 4](./assets/slides/DDCArv_Ch4.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 5](./assets/labs/Lab5.pdf)   | [PS 5](./assets/psets/ps5.pdf)   | [Chapter 5](./assets/slides/DDCArv_Ch5.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 6](./assets/labs/Lab6.pdf)   | [PS 6](./assets/psets/ps6.pdf)   | [Chapter 6](./assets/slides/DDCArv_Ch6.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 7](./assets/labs/Lab7.pdf)   | [PS 7](./assets/psets/ps7.pdf)   | [Chapter 7](./assets/slides/DDCArv_Ch7.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 8](./assets/labs/Lab8.pdf)   | [PS 8](./assets/psets/ps8.pdf)   | [Chapter 9](./assets/slides/DDCArv_Ch9.pdf)   |
+|                                   |                                  |                                               |
+| [Lab 9](./assets/labs/Lab9.pdf)   | [PS 9](./assets/psets/ps9.pdf)   | [Appendix C](./assets/slides/DDCArv_AppC.pdf) |
+|                                   |                                  |                                               |
+| [Lab 10](./assets/labs/Lab10.pdf) | [PS 10](./assets/psets/ps10.pdf) |                                               |
+|                                   |                                  |                                               |
+| [Lab 11](./assets/labs/Lab11.pdf) |                                  |                                               |
++-----------------------------------+----------------------------------+-----------------------------------------------+
+
+## Handouts & Resources
+
+[Github Repo with Starter Code](https://github.com/HMC-E85/E85)
+
+[RISC-V Quick Reference](./assets/doc/000_RISCV_summary.pdf)
+
+## Welcome to E85!
+
+This website has the syllabus as well as links to some helpful resources for E85 this semester.
+
+## Helpful Links
+
+### Course Details
+
+-   [Textbook](http://pages.hmc.edu/harris/ddca/ddcarv.html)
+
+### Tools
+
+-   [Segger Embedded Studio](https://www.segger.com/products/development-tools/embedded-studio/)
+-   [PlatformIO](https://platformio.org/)
+-   [Compiler Explorer](https://godbolt.org/)
+-   [Assembler/Disassembler](https://luplab.gitlab.io/rvcodecjs)
+-   [WebFloat](https://luplab.gitlab.io/rvcodecjs)
+
+### References
+
+-   [SystemVerilog Spec](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5354441)
+-   [RISC-V Spec](https://riscv.org/technical/specifications/)
+-   [RED-V Board](https://www.sparkfun.com/products/15799)
+-   [FE310 Manual](https://cdn.sparkfun.com/assets/7/f/0/2/7/fe310-g002-manual-v19p05.pdf)
+-   [FE310 Datasheet](http://pages.hmc.edu/harris/class/e85/fe310-g003-datasheet-v1p1.pdf)
+-   [LIS3DH Datasheet](https://cdn-learn.adafruit.com/assets/assets/000/085/846/original/lis3dh.pdf?1576396666)
+-   [LED Matrix Datasheet](https://drive.google.com/file/d/1xUFJVkhH5ZRTYszyMqNcLxXSa_bIb7wQ/view?usp=sharing)
+
+### Old Semesters
+
+-   [Fall 2022](http://pages.hmc.edu/harris/class/e85/old/fall22/index.html)
+-   [Spring 2022](http://pages.hmc.edu/harris/class/e85/old/spring22/index.html)
+-   [Fall 2021](http://pages.hmc.edu/harris/class/e85/old/fall21/index.html)
+-   [Fall 2019](http://pages.hmc.edu/harris/class/e85/old/fall19/index.html)
+-   [Spring 2018](http://pages.hmc.edu/harris/class/e85/old/spring18/index.html)
+-   [Spring 2017](http://pages.hmc.edu/harris/class/e85/old/spring17/index.html)
+-   [Fall 2010](http://pages.hmc.edu/harris/class/e85/old/fall10/index.html)
+-   [Fall 2007](http://pages.hmc.edu/harris/class/e85/old/fall07/index.html)
+-   [Spring 2001](http://pages.hmc.edu/harris/class/e85/old/spring01/index.html)
