@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lab 1: Electrical Characteristics of Logic Gates – E85</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a093c945cd05b8e8d7b298cf2da88cfd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">E85</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../syllabus/"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources/"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objective" id="toc-objective" class="nav-link active" data-scroll-target="#objective"><span class="header-section-number">1</span> Objective</a></li>
+  <li><a href="#tutorial-test-and-measurement-equipment" id="toc-tutorial-test-and-measurement-equipment" class="nav-link" data-scroll-target="#tutorial-test-and-measurement-equipment"><span class="header-section-number">2</span> Tutorial: Test and Measurement Equipment</a>
+  <ul class="collapse">
+  <li><a href="#breadboard" id="toc-breadboard" class="nav-link" data-scroll-target="#breadboard"><span class="header-section-number">2.1</span> Breadboard</a></li>
+  <li><a href="#multimeter" id="toc-multimeter" class="nav-link" data-scroll-target="#multimeter"><span class="header-section-number">2.2</span> Multimeter</a></li>
+  <li><a href="#oscilloscope" id="toc-oscilloscope" class="nav-link" data-scroll-target="#oscilloscope"><span class="header-section-number">2.3</span> Oscilloscope</a></li>
+  <li><a href="#function-generator" id="toc-function-generator" class="nav-link" data-scroll-target="#function-generator"><span class="header-section-number">2.4</span> Function Generator</a></li>
+  </ul></li>
+  <li><a href="#gates-switches-and-leds" id="toc-gates-switches-and-leds" class="nav-link" data-scroll-target="#gates-switches-and-leds"><span class="header-section-number">3</span> Gates, Switches, and LEDs</a></li>
+  <li><a href="#cmos-inverter-electrical-characteristics" id="toc-cmos-inverter-electrical-characteristics" class="nav-link" data-scroll-target="#cmos-inverter-electrical-characteristics"><span class="header-section-number">4</span> CMOS Inverter Electrical Characteristics</a></li>
+  <li><a href="#ring-oscillator" id="toc-ring-oscillator" class="nav-link" data-scroll-target="#ring-oscillator"><span class="header-section-number">5</span> Ring Oscillator</a></li>
+  <li><a href="#full-adder" id="toc-full-adder" class="nav-link" data-scroll-target="#full-adder"><span class="header-section-number">6</span> Full Adder</a></li>
+  <li><a href="#what-to-turn-in" id="toc-what-to-turn-in" class="nav-link" data-scroll-target="#what-to-turn-in"><span class="header-section-number">7</span> What to Turn In</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 1: Electrical Characteristics of Logic Gates</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objective" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="objective"><span class="header-section-number">1</span> Objective</h2>
+<p>The purpose of this lab is to become comfortable with logic gates as physical objects, interpret datasheets, and use test-and-measurement equipment to characterize their physical properties including voltage transfer characteristics, power consumption, and propagation delay. Specifically, you will use a breadboard, multimeter, oscilloscope, triple-output power supply, and signal generator. You will connect gate inputs to switches and outputs to LEDs to visualize the behavior. You will explore the voltage transfer characteristics, delay, and power consumption of a 74HC04 inverter, a transistor-level inverter, and a ring oscillator. You will then design, build, and test a full adder with logic gates.</p>
+</section>
+<section id="tutorial-test-and-measurement-equipment" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="tutorial-test-and-measurement-equipment"><span class="header-section-number">2</span> Tutorial: Test and Measurement Equipment</h2>
+<p>This tutorial covers the breadboard, multimeter, oscilloscope, and function generator. There are also <a href="https://pages.hmc.edu/harris/class/e85/">videos on the class web</a> page showing how to use the breadboard, multimeter, oscilloscope, and signal generator, and how to wire up simple circuits. If you haven’t done these things before, the videos will save you some time.</p>
+<section id="breadboard" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="breadboard"><span class="header-section-number">2.1</span> Breadboard</h3>
+<p>You may use two different styles of breadboards in the lab. The Global Specialties protoboards, shown in Figure 1, have a convenient built-in power supply and LEDs, switches, and a basic function generator. They must stay at the lab stations in the Digital Lab. The other style is the small breadboard of Figure 2 like the ones you may have used in other classes. It lacks the supporting features, but you can check one out from the stock room and work from any convenient place.</p>
+<div id="fig-breadboards" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-breadboards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-breadboards" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-large-breadboard" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-large-breadboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/large-breadboard.png" class="img-fluid figure-img" data-ref-parent="fig-breadboards">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-large-breadboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Large Breadboard. Video introduction available.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-breadboards" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-small-breadboard" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-small-breadboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/small-breadboard.png" class="img-fluid figure-img" data-ref-parent="fig-breadboards">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-small-breadboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Small Breadboard
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-breadboards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Breadboards
+</figcaption>
+</figure>
+</div>
+<p>Familiarize yourself with the breadboard you’re going to use. Either is sufficient for the course. Use a multimeter and some bits of wire to check which rows in the breadboard are connected.</p>
+<section id="global-specialties-breadboard" class="level4" data-number="2.1.1">
+<h4 data-number="2.1.1" class="anchored" data-anchor-id="global-specialties-breadboard"><span class="header-section-number">2.1.1</span> Global Specialties Breadboard</h4>
+<p>Use the ohmmeter mode of the multimeter to confirm that horizontal rows of five holes are connected. Vertical columns of five holes are connected and intended for power and ground, but note that the top and bottom half of each column is not connected on this breadboard, making it easy to accidentally not power your circuits. Refer to the video for a demonstration. You can apply inputs using the logic switches and check outputs using the logic indicators shown in Figure 3. Be sure to configure the switches and indicators for 5 volt CMOS levels by making sure the voltage switches are both in the +5 volt position (not variable voltage) and the logic family switch is in the CMOS position. Refer to the video for a demonstration.</p>
+<div id="fig-logic-indicators-and-switches" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logic-indicators-and-switches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/large-breadboard-logic-indicators.png" class="img-fluid figure-img"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/large-breadboard-switches.png" class="img-fluid figure-img"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-logic-indicators-and-switches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Logic Indicators and Switches.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="small-breadboard" class="level4" data-number="2.1.2">
+<h4 data-number="2.1.2" class="anchored" data-anchor-id="small-breadboard"><span class="header-section-number">2.1.2</span> Small breadboard</h4>
+<p>Horizontal rows of five holes are connected and each entire vertical column is connected. The vertical columns are connected and intended for power (red) and ground (blue or black). On this breadboard, you can apply inputs by running wires from the power or ground columns.</p>
+<p>You can also use the Wavetek logic probe shown in <a href="#fig-wavetek-logic-probe" class="quarto-xref">Figure&nbsp;3</a> to check voltage levels.</p>
+<div id="fig-wavetek-logic-probe" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wavetek-logic-probe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/wavetek-logic-probe.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wavetek-logic-probe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Wavetek Logic Probe
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>To use a logic probe, connect the reference (black mini-alligator clip) to ground and the high supply (red mini-grabber) to Vcc, which is +5V in our case. The probe will indicate whether you touch a logic <strong>HI</strong> or a logic <strong>LO</strong> output on your board, assuming you are using the same +5V and ground to power your board as well as the logic probe.
+<ul>
+<li>The <strong>TTL</strong>/<strong>CMOS</strong> switch should be in the <strong>CMOS</strong> position if using CMOS parts.</li>
+<li>Leave the <strong>MEM</strong>/<strong>PULSE</strong> switch in the <strong>PULSE</strong> position.</li>
+</ul></li>
+</ul>
+<p>When you are done building circuits, return the components to the supply drawers. Use the IC extractor from Figure 5 to carefully rock chips out without bending the pins. If you have reason to suspect a chip was damaged, throw it in the trash rather than making your classmates unhappy. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div id="fig-ic-extractor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ic-extractor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ic-puller.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ic-extractor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Integrated Circuit (IC) Extractor
+</figcaption>
+</figure>
+</div>
+<p>Taking the time to neatly wire will usually save you time in the long run because your circuit will be easier to debug. Never run a wire directly over a chip because you may find you need to remove and replace the chip.</p>
+<p>If you are concerned that a piece of equipment in the lab is not working correctly, please put a sheet of paper on it with the symptoms and notify the instructor immediately. Your classmates will be grateful. Even if you are uncertain about whether the equipment is working, it is better to report it than ignore it.</p>
+</section>
+</section>
+<section id="multimeter" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="multimeter"><span class="header-section-number">2.2</span> Multimeter</h3>
+<p>A multimeter is used to measure steady voltages, currents, and resistances. In this class, you will mostly be interested in the DC voltage, DC current, and resistance modes, although multimeters can also measure steady AC voltages and currents.</p>
+<p>It is remarkably easy to measure something other than what you think you are measuring. It is prudent to test your measurement equipment on a known value before attempting to measure an unknown. It’s also wise to predict the value of any measurement before you make it, and to investigate more closely if your prediction and measurement disagree.</p>
+<p>Connect two vertical columns of a breadboard to 5V and ground, respectively, using either a Global Specialties breadboard with the built-in power supply or a standalone power supply and appropriate cables.</p>
+<p>Put the multimeter in DC voltage mode. Make sure the two probes are in the voltage positions. Turn on the power supply. Place some wires in the breadboard columns so they are easy to contact. Measure the voltage and confirm that it is approximately 5V.</p>
+<p>Get two 10 K resistors from the supply cabinet. Learn to read the resistor color codes so you can check you have the proper resistors. For example, see:</p>
+<p><a href="https://www.arrow.com/en/research-and-events/articles/resistor-color-code" class="uri">https://www.arrow.com/en/research-and-events/articles/resistor-color-code</a></p>
+<p>The gold band on the resistor indicates +/- 5% tolerance.</p>
+<p>Put the multimeter in ohmmeter mode. Measure each resistor and confirm that it is within tolerance.</p>
+<p>Wire the resistors in series between 5V and ground on your breadboard. Predict the voltage between the two resistors (hint: it should be 5 * 10k / (10k + 10k) = 2.5V using the voltage divider equation) and confirm this with a DC voltage reading.</p>
+<p>Put the multimeter in DC current mode. Note that you have to move the probes to different positions on the multimeter to read current. Predict the current following through the resistors (hint: it should be 5 / (10k + 10k) = 0.25 mA according to Ohm’s Law). Measure the current. Remember that current measurement is done in series rather than in parallel, so you will have to lift at least one resistor terminal out of the breadboard to make this measurement. Put the multimeter probes back in the voltage position when you are done so you don’t confuse the next user.</p>
+<p>Put the resistors back in the supply cabinet when you are done.</p>
+</section>
+<section id="oscilloscope" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="oscilloscope"><span class="header-section-number">2.3</span> Oscilloscope</h3>
+<p>An oscilloscope can be used to measure repetitive (periodic) signals or one-time events. Unlike a multimeter, it plots voltage vs.&nbsp;time, which is essential for debugging transient problems. Figure 6 shows the Agilent 54622D oscilloscopes in the lab. <strong>Auto</strong> mode is easy for periodic signals, but for one-time events you’ll need <strong>Single</strong> mode. Many interesting digital events thus require <strong>Single</strong> mode. Refer to the video to see how to use the oscilloscope and signal generator.</p>
+<div id="fig-oscilloscope" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oscilloscope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/oscilloscope-annotated.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oscilloscope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Labelled Guide to Navigating the Agilent 54622D
+</figcaption>
+</figure>
+</div>
+<p>To measure a one-time event such as a button press, press the <strong>Mode/Coupling</strong> button to get to the mode menu. Choose <strong>Single</strong> (on some scopes, <strong>Normal</strong> as seen in Figure 7) by pressing the soft button under the mode menu of the screen. To measure a repetitive event such as a square wave, choose <strong>Auto</strong>. Next, click on the Edge button. Select the channel of interest (e.g.&nbsp;channel 1) and whether to trigger on the rising or falling edge. Adjust the Trigger Level knob to the midpoint of your expected event (e.g.&nbsp;2.5 V).</p>
+<div id="fig-oscilloscpe-modes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oscilloscpe-modes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/oscilloscope-mode.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oscilloscpe-modes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Setting Mode
+</figcaption>
+</figure>
+</div>
+<p>You will usually have to adjust the time and voltage knobs to set the appropriate horizontal and vertical scales for the oscilloscope. That means you have to have a good idea of what you expect to see so that you can set the right scale to see it.</p>
+<p>It is easy to misconfigure an oscilloscope and thus miss your signal. Always test your scope on a known signal before attempting to measure an unknown signal.</p>
+<p>Use the oscilloscope in Auto mode to measure a 5V signal. Learn to use the cursors or measurement buttons to check the voltage. Then use the oscilloscope in Normal mode to measure a button being pressed. Adjust the scope so you can see the signal rise from 0 to 5V.</p>
+<p>Sometimes students leave the oscilloscope in a weird configuration. If you are feeling bamboozled, hit the <strong>Setup</strong> button and choose <strong>Default Setup</strong> to get to a known reasonable state.</p>
+</section>
+<section id="function-generator" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="function-generator"><span class="header-section-number">2.4</span> Function Generator</h3>
+<p>A function generator produces periodic or arbitrary time varying voltages. In this class, you will mostly be interested in generating square waves that alternate between 0 and 5 V at a specific frequency.</p>
+<p>The Global Specialties have a basic on-board function generator shown in Figure 8. Set the button at the bottom to square (not sine or triangle). Use the top buttons and sliders to change the frequency.</p>
+<div id="fig-function-generator-breadboard" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-function-generator-breadboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/large-breadboard-function-generator.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-function-generator-breadboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Function Generator on Large Breadboard
+</figcaption>
+</figure>
+</div>
+<p>The HP 33120A function generators in the lab (Figure 9) can produce more precise waveforms at higher frequencies. Press the square wave button to generate the signal alternating between low and high. Press the Freq button and adjust the frequency with the knob. Use the Ampl and Offset buttons to set the low and high levels. For example, to oscillate between 0 and 5 volts, set Ampl to 5 and Offset to 2.5 (the average level of the output). You will need a cable with a BNC connector on one end and two alligator clips on the other to connect the function generator output to your breadboard.</p>
+<div id="fig-function-generator" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-function-generator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/hp-function-generator.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-function-generator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: 33120A 15MHz Function Generator
+</figcaption>
+</figure>
+</div>
+<p>Set up a function generator to produce a 1.0 KHz square wave oscillating from 0 to 5 V. Configure the oscilloscope in Auto mode and observe the square wave. This is a simple repetitive signal so you can use the AutoScale button to set up the time and voltage scales (but beware that autoscale can get you in trouble when you aren’t measuring repetitive signals). Use the Quick Measurement buttons (see Figure 10) to measure the frequency and amplitude. Also learn to use the cursors (Figure 11) to make these measurements manually.</p>
+<div id="fig-oscilloscope-automatic-measurement" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oscilloscope-automatic-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/oscilloscope-measurement-menu.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oscilloscope-automatic-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Automatic Measurement Menu
+</figcaption>
+</figure>
+</div>
+<div id="fig-oscilloscope-automatic-measurement" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-oscilloscope-automatic-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/oscilloscope-measurements.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-oscilloscope-automatic-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Cursors Menu
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="gates-switches-and-leds" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="gates-switches-and-leds"><span class="header-section-number">3</span> Gates, Switches, and LEDs</h2>
+<p>The circuit shown below has a pushbutton switch, two light-emitting diodes (LEDs), and two inverters (<a href="http://pages.hmc.edu/harris/class/e85/74HC04.pdf">74HC04 datasheet</a>) <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div id="fig-logic-circuit" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-logic-circuit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/logic-circuit.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-logic-circuit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Select appropriate resistor values for R1-R3 by considering current flow in the circuit. Use the datasheet to find the inverter input current. Most LEDs can pass 20mA of current continuously without damage, but about 10mA of LED current is sufficient to light up the LEDs used in this class.</li>
+<li>Build the circuit on a breadboard..
+<ul>
+<li>Use switches and stand-alone LEDs from the supply cabinet rather than the ones built into the large board, so you become comfortable with wiring them up. Remember that an LED has polarity; the shorter leg is the cathode and goes to the lower voltage.</li>
+<li>Refer to the videos for a demo on wiring a button and to see it in action on an oscilloscope, as well as how to wire an inverter.</li>
+<li>Predict what the LEDs should do as you press and release the switch, then test your circuit and resolve any discrepancies.</li>
+</ul></li>
+</ul>
+<p>If your measurements reveal suspicious behavior, make sure that power and ground are attached to the chip. It is possible to damage chips, especially by shorting an output to power, ground, or another output.</p>
+<p>Please put your components back in the supply cabinet if you are certain they work. If you had anomalous behavior, please throw the parts away rather than risk putting a bad component in the box to plague the next student in the lab.</p>
+</section>
+<section id="cmos-inverter-electrical-characteristics" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="cmos-inverter-electrical-characteristics"><span class="header-section-number">4</span> CMOS Inverter Electrical Characteristics</h2>
+<ul>
+<li>Sketch a schematic of a CMOS inverter built from <a href="http://pages.hmc.edu/harris/class/e85/TN2106.pdf">TN2106</a> and <a href="http://pages.hmc.edu/harris/class/e85/TP2104.pdf">TP2104</a> nMOS and pMOS transistors.</li>
+<li>Build your circuit on a breadboard.
+<ul>
+<li>Set VDD = 5 V. Connect one input to an adjustable voltage.</li>
+<li>Measure the input and output voltages with a multimeter or oscilloscope.</li>
+<li>Beware: discrete MOS transistors are static sensitive. Ground yourself by touching a large metal object before handling your transistors.</li>
+<li>The source of each transistor is connected to its body within the package. Therefore, be sure to connect the source of the nMOS to ground and the source of the pMOS to VDD so you don’t turn on any internal diodes inadvertently.</li>
+<li>The circuit has a high gain in the forbidden zone and substantial capacitance between the output and input, so it is prone to oscillate, especially if you have long cables (with high inductance) to your power supply and input. If you have oscillation problems, you may be able to resolve them by placing a capacitor (e.g., 1 µF) between power and ground and/or between the input and ground on your breadboard near the circuit. This is called a bypass or decoupling capacitor and stabilizes the power supply and input to reduce the risk of oscillation.</li>
+</ul></li>
+<li>Adjust the input voltage and record the output. Enter your data into a spreadsheet or your favorite plotting program and generate a plot of the voltage transfer characteristic (VTC).
+<ul>
+<li>Be sure to take a minimum of 7 data points, enough so that you can see the interesting parts of the curve to capture it faithfully (20 or more is not unreasonable), and show the actual data points in your graph.</li>
+</ul></li>
+<li>Determine <span class="math inline">\(V_\text{IH}\)</span>, <span class="math inline">\(V_\text{IL}\)</span>, <span class="math inline">\(V_\text{OH}\)</span>, and <span class="math inline">\(V_\text{OL}\)</span>.</li>
+<li>Calculate the high and low noise margins.</li>
+</ul>
+</section>
+<section id="ring-oscillator" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="ring-oscillator"><span class="header-section-number">5</span> Ring Oscillator</h2>
+<p>With logic gates, we send an input in and get an output out. That output often seems to appear instantaneously. However, with this ring oscillator, you will experiment with factors that influence the response time and see that digital logic has a <em>finite</em> response time.</p>
+<ul>
+<li>Draw the schematic for a 5-stage ring oscillator as shown below. Label the pin numbers of each inverter input and output using a <a href="http://pages.hmc.edu/harris/class/e85/74HC04.pdf">74HC04</a> chip.</li>
+<li>Build your circuit on a breadboard. Ground any unused inputs.</li>
+<li>Think about the circuit and predict what it should do. Why must it have an odd number of stages?</li>
+<li>Capture the output on the oscilloscope and compare with your expectations.</li>
+<li>Measure the period and frequency of the output. From this measurement, calculate the average propagation delay of an individual inverter.</li>
+<li>Touch the wires and observe the frequency change. Why does the frequency change?</li>
+<li>Measure the current consumption of the circuit with an ammeter between 5V and the VCC pin of the chip <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+<li>Now build a new circuit with all of the inputs of the 74HC04 chip grounded. Do not leave the output of an individual inverter connected to the input of another.</li>
+<li>Measure the quiescent current consumption of the 74HC04 chip. Is it within the specification of the datasheet? Explain any discrepancies.</li>
+<li>Why is the power consumption of the ring oscillator higher than the quiescent current consumption of the grounded chip?</li>
+</ul>
+<div id="fig-ring-oscillator" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ring-oscillator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ring-oscillator.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ring-oscillator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Ring oscillator schematic.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="full-adder" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="full-adder"><span class="header-section-number">6</span> Full Adder</h2>
+<p>Design a <em>full adder</em>. The inputs are <span class="math inline">\(A\)</span>, $<span class="math inline">\(B\)</span>, and <span class="math inline">\(C_\text{in}\)</span>. The outputs are <span class="math inline">\(S\)</span> and <span class="math inline">\(C_\text{out}\)</span>. The full adder computes <span class="math inline">\(\{C_\text{out}, S\} = A + B + C_\text{in}\)</span>. In other words, it sums the three inputs to produce a two-bit result, with <span class="math inline">\(S\)</span> being the least significant bit and <span class="math inline">\(C_\text{out}\)</span> being the most significant bit. <span class="math inline">\(C_\text{in}\)</span> and <span class="math inline">\(C_\text{out}\)</span> are called the carries. For example, if <span class="math inline">\(A = 1\)</span>, <span class="math inline">\(B = 0\)</span>, and <span class="math inline">\(C_\text{in} = 1\)</span>, the result is 1 + 0 + 1 = 210 = 102. Thus, the sum is 0 and the carry out is 1. Although the logic for a full adder is in the textbook and many other places, please work it out yourself from first principles.</p>
+<div id="fig-full-adder-symbol" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-full-adder-symbol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/full-adder.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-full-adder-symbol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Full adder symbol.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Write the truth table below for your full adder.</li>
+</ul>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Inputs</strong></td>
+<td></td>
+<td></td>
+<td><strong>Outputs</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong><em>C</em>in</strong></td>
+<td><strong><em>B</em></strong></td>
+<td><strong><em>A</em></strong></td>
+<td><strong><em>C</em>out</strong></td>
+<td><strong><em>S</em></strong></td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 5: Full Adder Truth Table</strong></p>
+<ul>
+<li>Sketch a schematic using 74-series components. Label each gate with the part number (e.g.&nbsp;04 for a 74HC04 inverter) and label each gate’s inputs and output with the pin number as described in Appendix A.7.</li>
+<li>Build your circuit on the breadboard. It will take careful wiring to avoid a rat’s nest and make it easy to debug. Connect the inputs to logic switches or DIP switches with pull-down resistors, and outputs to LEDs. Try all eight combinations for the inputs and check that the outputs match your truth table. Debug any discrepancies.</li>
+</ul>
+</section>
+<section id="what-to-turn-in" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="what-to-turn-in"><span class="header-section-number">7</span> What to Turn In</h2>
+<ol type="1">
+<li>Please indicate how many hours you spent on this lab. This will be helpful for calibrating the workload for next time the course is taught. Include any suggestions you have for improving the lab. You will get one point for listing your time on each lab.</li>
+<li>Gates, Switches, and LEDs
+<ol type="a">
+<li>What resistor values did you choose? Why?</li>
+<li>Did your circuit function correctly?</li>
+</ol></li>
+<li>Transistor-level Inverter
+<ol type="a">
+<li>Plot of VTC</li>
+<li>Input and output logic levels</li>
+<li>High and low noise margins.</li>
+</ol></li>
+<li>Ring oscillator
+<ol type="a">
+<li>Photo of oscilloscope trace of switching output, annotated with the period and frequency.</li>
+<li>Compute the average delay of a single inverter from the ring</li>
+<li>Why does the frequency change when you touch the wires?</li>
+<li>Measured power consumption for both the ring oscillator and the powered quiescent chip</li>
+</ol></li>
+<li>Full adder
+<ol type="a">
+<li>Truth table</li>
+<li>Schematic</li>
+<li>Do your measured outputs match your truth table in all eight cases?</li>
+</ol></li>
+</ol>
+<p>Please indicate any bugs you found in this lab manual, or any suggestions you would have to improve the lab.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>If a chip has given you particular grief, you might want to take it home instead. Glue some googly eyes by pins 1 and 14, and a cute wire tail on the bottom, and start a farm of chip bugs.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>You can find the pinouts of common 74-series logic gates in Appendix A.2.1 of the textbook (online and on the class web site) and the <a href="http://pages.hmc.edu/harris/class/e85/74HC04.pdf">74HC04 datasheet</a> in Appendix A.5 or on the class website.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>To measure supply current of a chip, you must remove the wire connecting the VCC pin to the 5V power supply and replace it with the ammeter. The ammeter must have the leads in the proper receptacles (different than for voltage measurement) and be on the DC current scale. If you place the ammeter in parallel with your chip (e.g.&nbsp;one lead to power supply and one to ground), you’ll create a short circuit between power and ground and probably blow out the fuse on your ammeter. Refer to the videos for a demonstration.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

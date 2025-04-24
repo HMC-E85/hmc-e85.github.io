@@ -117,5 +117,33 @@
     "title": "E85",
     "section": "Helpful Links",
     "text": "Helpful Links\n\nCourse Details\n\nCourse Syllabus\nSchedule\nTextbook\n\n\n\nTools\n\nSegger Embedded Studio\nPlatformIO\nCompiler Explorer\nAssembler/Disassembler\nWebFloat\n\n\n\nReferences\n\nSystemVerilog Spec\nRISC-V Spec\nRED-V Board\nFE310 Manual\nFE310 Datasheet\nLIS3DH Datasheet\nLED Matrix Datasheet\n\n\n\nOld Semesters\n\nFall 2022\nSpring 2022\nFall 2021\nFall 2019\nSpring 2018\nSpring 2017\nFall 2010\nFall 2007\nSpring 2001"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "HMC E85",
+    "section": "",
+    "text": "Syllabus"
+  },
+  {
+    "objectID": "index.html#administrative",
+    "href": "index.html#administrative",
+    "title": "HMC E85",
+    "section": "",
+    "text": "Syllabus"
+  },
+  {
+    "objectID": "index.html#course-resources",
+    "href": "index.html#course-resources",
+    "title": "HMC E85",
+    "section": "Course Resources",
+    "text": "Course Resources\n\n\n\nLabs\nProblem Sets\nLectures\n\n\n\n\nLab 1\nLab 2\nLab 3\nLab 4\nLab 5\nLab 6\nLab 7\nLab 8\nLab 9\nLab 10\nLab 11\nPS 1\nPS 2\nPS 3\nPS 4\nPS 5\nPS 6\nPS 7\nPS 8\nPS 9\nPS 10\nChapter 1\nChapter 2\nChapter 3\nChapter 4\nChapter 5\nChapter 6\nChapter 7\nChapter 9\nAppendix C"
+  },
+  {
+    "objectID": "index.html#handouts-resources",
+    "href": "index.html#handouts-resources",
+    "title": "HMC E85",
+    "section": "Handouts & Resources",
+    "text": "Handouts & Resources\nGithub Repo with Starter Code\nRISC-V Quick Reference"
   }
 ]
